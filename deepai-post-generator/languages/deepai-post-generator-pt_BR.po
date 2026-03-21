@@ -1,0 +1,369 @@
+# Portuguese (Brazil) translation for DeepAI Post Generator
+# Copyright (C) 2026 DeepAI
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DeepAI Post Generator 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-21 00:00+0000\n"
+"PO-Revision-Date: 2026-03-21 00:00+0000\n"
+"Last-Translator: DeepAI <info@deepai.com>\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "DeepAI Post Generator requires PHP %s or higher."
+msgstr "DeepAI Post Generator requer PHP %s ou superior."
+
+msgid "DeepAI Post Generator requires WordPress %s or higher."
+msgstr "DeepAI Post Generator requer WordPress %s ou superior."
+
+msgid "DeepAI Post Generator"
+msgstr "DeepAI Gerador de Posts"
+
+msgid "DeepAI Writer"
+msgstr "DeepAI Escritor"
+
+msgid "Generate Content"
+msgstr "Gerar Conteúdo"
+
+msgid "Generate"
+msgstr "Gerar"
+
+msgid "Prompt Templates"
+msgstr "Modelos de Prompt"
+
+msgid "Prompts"
+msgstr "Prompts"
+
+msgid "Generation History"
+msgstr "Histórico de Geração"
+
+msgid "History"
+msgstr "Histórico"
+
+msgid "Settings"
+msgstr "Configurações"
+
+msgid "Generating content..."
+msgstr "Gerando conteúdo..."
+
+msgid "Regenerating content..."
+msgstr "Regenerando conteúdo..."
+
+msgid "Saving post..."
+msgstr "Salvando post..."
+
+msgid "Content generated successfully!"
+msgstr "Conteúdo gerado com sucesso!"
+
+msgid "Post saved successfully!"
+msgstr "Post salvo com sucesso!"
+
+msgid "An error occurred. Please try again."
+msgstr "Ocorreu um erro. Tente novamente."
+
+msgid "Are you sure you want to delete this prompt?"
+msgstr "Tem certeza que deseja excluir este prompt?"
+
+msgid "API connection successful!"
+msgstr "Conexão API bem-sucedida!"
+
+msgid "API connection failed."
+msgstr "Falha na conexão API."
+
+msgid "No content generated yet."
+msgstr "Nenhum conteúdo gerado ainda."
+
+msgid "Generating image..."
+msgstr "Gerando imagem..."
+
+msgid "Image generated successfully!"
+msgstr "Imagem gerada com sucesso!"
+
+msgid "DeepAI Post Generator — Settings"
+msgstr "DeepAI Gerador de Posts — Configurações"
+
+msgid "API Configuration"
+msgstr "Configuração da API"
+
+msgid "Content Generation"
+msgstr "Geração de Conteúdo"
+
+msgid "Image Generation"
+msgstr "Geração de Imagem"
+
+msgid "SEO & Linking"
+msgstr "SEO e Links"
+
+msgid "Save Settings"
+msgstr "Salvar Configurações"
+
+msgid "API Provider"
+msgstr "Provedor de API"
+
+msgid "OpenAI API Key"
+msgstr "Chave API OpenAI"
+
+msgid "OpenRouter API Key"
+msgstr "Chave API OpenRouter"
+
+msgid "Default Model"
+msgstr "Modelo Padrão"
+
+msgid "Default AI Language"
+msgstr "Idioma Padrão da IA"
+
+msgid "Default Tone"
+msgstr "Tom Padrão"
+
+msgid "Default Word Count"
+msgstr "Contagem de Palavras Padrão"
+
+msgid "Default Post Status"
+msgstr "Status Padrão do Post"
+
+msgid "Generate In-Content Images"
+msgstr "Gerar Imagens no Conteúdo"
+
+msgid "Generate Featured Image"
+msgstr "Gerar Imagem Destacada"
+
+msgid "Image Size"
+msgstr "Tamanho da Imagem"
+
+msgid "Enable Internal Linking"
+msgstr "Habilitar Links Internos"
+
+msgid "Max Internal Links"
+msgstr "Máximo de Links Internos"
+
+msgid "Enable External Linking"
+msgstr "Habilitar Links Externos"
+
+msgid "Max External Links"
+msgstr "Máximo de Links Externos"
+
+msgid "External Link Rel Attribute"
+msgstr "Atributo Rel dos Links Externos"
+
+msgid "English"
+msgstr "Inglês"
+
+msgid "Spanish"
+msgstr "Espanhol"
+
+msgid "Portuguese"
+msgstr "Português"
+
+msgid "French"
+msgstr "Francês"
+
+msgid "German"
+msgstr "Alemão"
+
+msgid "Italian"
+msgstr "Italiano"
+
+msgid "Chinese"
+msgstr "Chinês"
+
+msgid "Japanese"
+msgstr "Japonês"
+
+msgid "Korean"
+msgstr "Coreano"
+
+msgid "Arabic"
+msgstr "Árabe"
+
+msgid "Russian"
+msgstr "Russo"
+
+msgid "Hindi"
+msgstr "Hindi"
+
+msgid "Professional"
+msgstr "Profissional"
+
+msgid "Casual"
+msgstr "Casual"
+
+msgid "Academic"
+msgstr "Acadêmico"
+
+msgid "Conversational"
+msgstr "Conversacional"
+
+msgid "Humorous"
+msgstr "Humorístico"
+
+msgid "Formal"
+msgstr "Formal"
+
+msgid "Friendly"
+msgstr "Amigável"
+
+msgid "Test Connection"
+msgstr "Testar Conexão"
+
+msgid "Key saved"
+msgstr "Chave salva"
+
+msgid "Load Available Models"
+msgstr "Carregar Modelos Disponíveis"
+
+msgid "Draft"
+msgstr "Rascunho"
+
+msgid "Pending Review"
+msgstr "Revisão Pendente"
+
+msgid "Published"
+msgstr "Publicado"
+
+msgid "Content Settings"
+msgstr "Configurações de Conteúdo"
+
+msgid "Topic / Title"
+msgstr "Tópico / Título"
+
+msgid "Keywords"
+msgstr "Palavras-chave"
+
+msgid "Article Type"
+msgstr "Tipo de Artigo"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Tone"
+msgstr "Tom"
+
+msgid "Word Count"
+msgstr "Contagem de Palavras"
+
+msgid "AI Model"
+msgstr "Modelo de IA"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "Post Status"
+msgstr "Status do Post"
+
+msgid "Generated Content"
+msgstr "Conteúdo Gerado"
+
+msgid "Ready to Generate"
+msgstr "Pronto para Gerar"
+
+msgid "Save as Draft"
+msgstr "Salvar como Rascunho"
+
+msgid "Publish"
+msgstr "Publicar"
+
+msgid "Regenerate"
+msgstr "Regenerar"
+
+msgid "Regenerate Content"
+msgstr "Regenerar Conteúdo"
+
+msgid "What changes would you like?"
+msgstr "Quais mudanças você gostaria?"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Templates"
+msgstr "Modelos"
+
+msgid "Add New Template"
+msgstr "Adicionar Novo Modelo"
+
+msgid "Available Placeholders"
+msgstr "Variáveis Disponíveis"
+
+msgid "Select a Template"
+msgstr "Selecionar um Modelo"
+
+msgid "Template Name"
+msgstr "Nome do Modelo"
+
+msgid "Prompt Template"
+msgstr "Modelo de Prompt"
+
+msgid "Save Template"
+msgstr "Salvar Modelo"
+
+msgid "Delete"
+msgstr "Excluir"
+
+msgid "New Template"
+msgstr "Novo Modelo"
+
+msgid "Recent Generations"
+msgstr "Gerações Recentes"
+
+msgid "total"
+msgstr "total"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Provider"
+msgstr "Provedor"
+
+msgid "Model"
+msgstr "Modelo"
+
+msgid "Tokens"
+msgstr "Tokens"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Post"
+msgstr "Post"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Next"
+msgstr "Próximo"
+
+msgid "No Generation History"
+msgstr "Sem Histórico de Geração"
+
+msgid "Your content generation history will appear here."
+msgstr "Seu histórico de geração de conteúdo aparecerá aqui."
+
+msgid "You do not have permission to use the content generator."
+msgstr "Você não tem permissão para usar o gerador de conteúdo."
+
+msgid "OpenAI API key is not configured. Please add it in Settings."
+msgstr "A chave API do OpenAI não está configurada. Adicione-a nas Configurações."
+
+msgid "OpenRouter API key is not configured. Please add it in Settings."
+msgstr "A chave API do OpenRouter não está configurada. Adicione-a nas Configurações."
+
+msgid "API request failed with status code %d."
+msgstr "Requisição API falhou com código de status %d."
+
+msgid "Invalid response from OpenAI API."
+msgstr "Resposta inválida da API OpenAI."
+
+msgid "Invalid image response from OpenAI API."
+msgstr "Resposta de imagem inválida da API OpenAI."
+
+msgid "Invalid response from OpenRouter API."
+msgstr "Resposta inválida da API OpenRouter."
+
+msgid "Invalid image response from OpenRouter API."
+msgstr "Resposta de imagem inválida da API OpenRouter."

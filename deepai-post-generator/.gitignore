@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# WordPress specific
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+.htaccess
+
+# Composer
+vendor/
+composer.lock
+
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json
+
+# IDE / Editor
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+*.min.css.map
+*.min.js.map
+
+# Environment
+.env
+.env.local
+
+# OS
+desktop.ini

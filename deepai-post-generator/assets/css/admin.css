@@ -1,0 +1,969 @@
+/**
+ * DeepAI Post Generator — Admin Styles
+ *
+ * @package DeepAI_Post_Generator
+ * @since   1.0.0
+ */
+
+/* ==========================================================================
+   CSS Custom Properties
+   ========================================================================== */
+
+:root {
+	--deepai-primary: #4f46e5;
+	--deepai-primary-hover: #4338ca;
+	--deepai-primary-light: #eef2ff;
+	--deepai-success: #10b981;
+	--deepai-success-light: #d1fae5;
+	--deepai-danger: #ef4444;
+	--deepai-danger-light: #fee2e2;
+	--deepai-warning: #f59e0b;
+	--deepai-warning-light: #fef3c7;
+	--deepai-info: #3b82f6;
+	--deepai-info-light: #dbeafe;
+	--deepai-gray-50: #f9fafb;
+	--deepai-gray-100: #f3f4f6;
+	--deepai-gray-200: #e5e7eb;
+	--deepai-gray-300: #d1d5db;
+	--deepai-gray-400: #9ca3af;
+	--deepai-gray-500: #6b7280;
+	--deepai-gray-600: #4b5563;
+	--deepai-gray-700: #374151;
+	--deepai-gray-800: #1f2937;
+	--deepai-gray-900: #111827;
+	--deepai-radius: 8px;
+	--deepai-radius-lg: 12px;
+	--deepai-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+	--deepai-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--deepai-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	--deepai-transition: 0.2s ease;
+}
+
+/* ==========================================================================
+   Global Layout
+   ========================================================================== */
+
+.deepai-wrap {
+	max-width: 1400px;
+	margin: 20px auto 0;
+	padding: 0 20px;
+}
+
+.deepai-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 24px;
+	padding-bottom: 16px;
+	border-bottom: 2px solid var(--deepai-primary-light);
+}
+
+.deepai-header h1 {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--deepai-gray-900);
+	margin: 0;
+	padding: 0;
+}
+
+.deepai-header h1 .dashicons {
+	color: var(--deepai-primary);
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+}
+
+.deepai-version {
+	font-size: 12px;
+	color: var(--deepai-gray-400);
+	background: var(--deepai-gray-100);
+	padding: 4px 10px;
+	border-radius: 20px;
+	font-weight: 500;
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.deepai-card {
+	background: #fff;
+	border: 1px solid var(--deepai-gray-200);
+	border-radius: var(--deepai-radius-lg);
+	box-shadow: var(--deepai-shadow);
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.deepai-card-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 16px 20px;
+	background: var(--deepai-gray-50);
+	border-bottom: 1px solid var(--deepai-gray-200);
+}
+
+.deepai-card-header .dashicons {
+	color: var(--deepai-primary);
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+.deepai-card-header h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--deepai-gray-800);
+	flex: 1;
+}
+
+.deepai-card-body {
+	padding: 20px;
+}
+
+.deepai-card-footer {
+	padding: 16px 20px;
+	background: var(--deepai-gray-50);
+	border-top: 1px solid var(--deepai-gray-200);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.deepai-card-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* ==========================================================================
+   Settings Grid
+   ========================================================================== */
+
+.deepai-settings-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+	gap: 20px;
+}
+
+.deepai-settings-grid .deepai-card {
+	margin-bottom: 0;
+}
+
+.deepai-settings-footer {
+	margin-top: 24px;
+	text-align: right;
+}
+
+/* Settings fields inside cards */
+.deepai-card-body table.form-table {
+	margin: 0;
+}
+
+.deepai-card-body table.form-table th {
+	padding: 12px 10px 12px 0;
+	font-weight: 500;
+	color: var(--deepai-gray-700);
+}
+
+.deepai-card-body table.form-table td {
+	padding: 12px 0;
+}
+
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+
+.deepai-field {
+	margin-bottom: 20px;
+}
+
+.deepai-field:last-child {
+	margin-bottom: 0;
+}
+
+.deepai-field label {
+	display: block;
+	font-weight: 500;
+	color: var(--deepai-gray-700);
+	margin-bottom: 6px;
+	font-size: 14px;
+}
+
+.deepai-field label .required {
+	color: var(--deepai-danger);
+}
+
+.deepai-field .description {
+	margin-top: 4px;
+	font-size: 12px;
+	color: var(--deepai-gray-400);
+}
+
+.deepai-input,
+.deepai-select,
+.deepai-textarea {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid var(--deepai-gray-300);
+	border-radius: var(--deepai-radius);
+	font-size: 14px;
+	color: var(--deepai-gray-800);
+	background: #fff;
+	transition: border-color var(--deepai-transition), box-shadow var(--deepai-transition);
+	box-sizing: border-box;
+}
+
+.deepai-input:focus,
+.deepai-select:focus,
+.deepai-textarea:focus {
+	outline: none;
+	border-color: var(--deepai-primary);
+	box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.deepai-textarea {
+	resize: vertical;
+	min-height: 100px;
+	font-family: inherit;
+}
+
+.deepai-select {
+	cursor: pointer;
+}
+
+/* ==========================================================================
+   Toggle Switch
+   ========================================================================== */
+
+.deepai-toggle {
+	position: relative;
+	display: inline-block;
+	width: 48px;
+	height: 26px;
+}
+
+.deepai-toggle input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.deepai-toggle-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--deepai-gray-300);
+	border-radius: 26px;
+	transition: var(--deepai-transition);
+}
+
+.deepai-toggle-slider::before {
+	position: absolute;
+	content: "";
+	height: 20px;
+	width: 20px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	border-radius: 50%;
+	transition: var(--deepai-transition);
+	box-shadow: var(--deepai-shadow);
+}
+
+.deepai-toggle input:checked + .deepai-toggle-slider {
+	background-color: var(--deepai-primary);
+}
+
+.deepai-toggle input:checked + .deepai-toggle-slider::before {
+	transform: translateX(22px);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.deepai-btn-primary {
+	background: var(--deepai-primary) !important;
+	border-color: var(--deepai-primary) !important;
+	color: #fff !important;
+	border-radius: var(--deepai-radius) !important;
+	padding: 8px 20px !important;
+	font-weight: 500 !important;
+	transition: all var(--deepai-transition) !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 6px !important;
+}
+
+.deepai-btn-primary:hover {
+	background: var(--deepai-primary-hover) !important;
+	border-color: var(--deepai-primary-hover) !important;
+	color: #fff !important;
+}
+
+.deepai-btn-secondary {
+	background: #fff !important;
+	border-color: var(--deepai-gray-300) !important;
+	color: var(--deepai-gray-700) !important;
+	border-radius: var(--deepai-radius) !important;
+	padding: 8px 20px !important;
+	font-weight: 500 !important;
+	transition: all var(--deepai-transition) !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 6px !important;
+}
+
+.deepai-btn-secondary:hover {
+	background: var(--deepai-gray-50) !important;
+	border-color: var(--deepai-gray-400) !important;
+}
+
+.deepai-btn-outline {
+	background: transparent !important;
+	border: 1px solid var(--deepai-primary) !important;
+	color: var(--deepai-primary) !important;
+	border-radius: var(--deepai-radius) !important;
+	padding: 8px 20px !important;
+	font-weight: 500 !important;
+	transition: all var(--deepai-transition) !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 6px !important;
+}
+
+.deepai-btn-outline:hover {
+	background: var(--deepai-primary-light) !important;
+}
+
+.deepai-btn-danger {
+	background: var(--deepai-danger) !important;
+	border-color: var(--deepai-danger) !important;
+	color: #fff !important;
+	border-radius: var(--deepai-radius) !important;
+	padding: 8px 20px !important;
+	font-weight: 500 !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 6px !important;
+}
+
+.deepai-btn-danger:hover {
+	opacity: 0.9 !important;
+}
+
+.deepai-btn-large {
+	padding: 12px 28px !important;
+	font-size: 15px !important;
+}
+
+.deepai-btn-full {
+	width: 100%;
+	justify-content: center !important;
+	margin-top: 12px;
+}
+
+.deepai-actions {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.deepai-action-group {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Generator Layout
+   ========================================================================== */
+
+.deepai-generator-layout {
+	display: grid;
+	grid-template-columns: 380px 1fr;
+	gap: 24px;
+	align-items: start;
+}
+
+.deepai-generator-sidebar .deepai-card {
+	position: sticky;
+	top: 42px;
+}
+
+@media (max-width: 1024px) {
+	.deepai-generator-layout {
+		grid-template-columns: 1fr;
+	}
+	.deepai-generator-sidebar .deepai-card {
+		position: static;
+	}
+}
+
+/* ==========================================================================
+   Content Preview
+   ========================================================================== */
+
+.deepai-content-preview {
+	min-height: 400px;
+}
+
+.deepai-generated-content {
+	font-size: 15px;
+	line-height: 1.8;
+	color: var(--deepai-gray-800);
+}
+
+.deepai-generated-content h1,
+.deepai-generated-content h2,
+.deepai-generated-content h3,
+.deepai-generated-content h4 {
+	color: var(--deepai-gray-900);
+	margin-top: 24px;
+	margin-bottom: 12px;
+}
+
+.deepai-generated-content h2 {
+	font-size: 22px;
+	border-bottom: 2px solid var(--deepai-primary-light);
+	padding-bottom: 8px;
+}
+
+.deepai-generated-content h3 {
+	font-size: 18px;
+}
+
+.deepai-generated-content p {
+	margin-bottom: 14px;
+}
+
+.deepai-generated-content ul,
+.deepai-generated-content ol {
+	margin-left: 24px;
+	margin-bottom: 14px;
+}
+
+.deepai-generated-content li {
+	margin-bottom: 6px;
+}
+
+.deepai-generated-content a {
+	color: var(--deepai-primary);
+	text-decoration: underline;
+}
+
+.deepai-generated-content blockquote {
+	border-left: 4px solid var(--deepai-primary);
+	padding: 12px 20px;
+	margin: 16px 0;
+	background: var(--deepai-primary-light);
+	border-radius: 0 var(--deepai-radius) var(--deepai-radius) 0;
+}
+
+/* ==========================================================================
+   Empty State
+   ========================================================================== */
+
+.deepai-empty-state {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 400px;
+	text-align: center;
+	color: var(--deepai-gray-400);
+}
+
+.deepai-empty-state .dashicons {
+	font-size: 64px;
+	width: 64px;
+	height: 64px;
+	color: var(--deepai-gray-200);
+	margin-bottom: 16px;
+}
+
+.deepai-empty-state h3 {
+	font-size: 18px;
+	color: var(--deepai-gray-500);
+	margin: 0 0 8px 0;
+}
+
+.deepai-empty-state p {
+	font-size: 14px;
+	max-width: 320px;
+	margin: 0;
+}
+
+/* ==========================================================================
+   Loading State
+   ========================================================================== */
+
+.deepai-loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 400px;
+}
+
+.deepai-spinner {
+	width: 48px;
+	height: 48px;
+	border: 4px solid var(--deepai-gray-200);
+	border-top-color: var(--deepai-primary);
+	border-radius: 50%;
+	animation: deepai-spin 0.8s linear infinite;
+}
+
+@keyframes deepai-spin {
+	to { transform: rotate(360deg); }
+}
+
+.deepai-loading p {
+	margin-top: 16px;
+	color: var(--deepai-gray-500);
+	font-size: 14px;
+}
+
+/* ==========================================================================
+   Badges
+   ========================================================================== */
+
+.deepai-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 3px 10px;
+	font-size: 12px;
+	font-weight: 500;
+	border-radius: 20px;
+	background: var(--deepai-primary-light);
+	color: var(--deepai-primary);
+}
+
+.deepai-provider-badge {
+	display: inline-flex;
+	padding: 2px 8px;
+	font-size: 11px;
+	font-weight: 600;
+	border-radius: 4px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.deepai-provider-openai {
+	background: #e8f5e9;
+	color: #2e7d32;
+}
+
+.deepai-provider-openrouter {
+	background: #e3f2fd;
+	color: #1565c0;
+}
+
+.deepai-status-badge {
+	display: inline-flex;
+	padding: 2px 8px;
+	font-size: 11px;
+	font-weight: 500;
+	border-radius: 4px;
+}
+
+.deepai-status-completed {
+	background: var(--deepai-success-light);
+	color: #065f46;
+}
+
+.deepai-status-regenerated {
+	background: var(--deepai-info-light);
+	color: #1e40af;
+}
+
+.deepai-status-failed {
+	background: var(--deepai-danger-light);
+	color: #991b1b;
+}
+
+/* ==========================================================================
+   API Key Field
+   ========================================================================== */
+
+.deepai-api-key-field {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.deepai-api-key-field input {
+	flex: 1;
+	min-width: 200px;
+}
+
+.deepai-key-status {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.deepai-key-saved {
+	color: var(--deepai-success);
+}
+
+/* ==========================================================================
+   Models List
+   ========================================================================== */
+
+.deepai-models-list {
+	margin-top: 10px;
+	max-height: 200px;
+	overflow-y: auto;
+	border: 1px solid var(--deepai-gray-200);
+	border-radius: var(--deepai-radius);
+	padding: 8px;
+}
+
+.deepai-model-option {
+	padding: 6px 10px;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 13px;
+	color: var(--deepai-gray-700);
+	transition: background var(--deepai-transition);
+}
+
+.deepai-model-option:hover {
+	background: var(--deepai-primary-light);
+	color: var(--deepai-primary);
+}
+
+/* ==========================================================================
+   Prompts Layout
+   ========================================================================== */
+
+.deepai-prompts-layout {
+	display: grid;
+	grid-template-columns: 340px 1fr;
+	gap: 24px;
+	align-items: start;
+}
+
+@media (max-width: 900px) {
+	.deepai-prompts-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+.deepai-prompt-items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.deepai-prompt-item {
+	padding: 12px 16px;
+	border: 1px solid var(--deepai-gray-200);
+	border-radius: var(--deepai-radius);
+	margin-bottom: 8px;
+	cursor: pointer;
+	transition: all var(--deepai-transition);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.deepai-prompt-item:hover {
+	border-color: var(--deepai-primary);
+	background: var(--deepai-primary-light);
+}
+
+.deepai-prompt-item.active {
+	border-color: var(--deepai-primary);
+	background: var(--deepai-primary-light);
+	box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.deepai-prompt-name {
+	font-weight: 500;
+	color: var(--deepai-gray-800);
+	font-size: 14px;
+}
+
+.deepai-prompt-slug {
+	font-size: 11px;
+	color: var(--deepai-gray-400);
+	background: var(--deepai-gray-100);
+	padding: 2px 8px;
+	border-radius: 4px;
+}
+
+.deepai-placeholders-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.deepai-placeholders-table td {
+	padding: 6px 8px;
+	font-size: 13px;
+	border-bottom: 1px solid var(--deepai-gray-100);
+}
+
+.deepai-placeholders-table code {
+	background: var(--deepai-primary-light);
+	color: var(--deepai-primary);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 12px;
+}
+
+/* ==========================================================================
+   History Table
+   ========================================================================== */
+
+.deepai-table {
+	border: none !important;
+	border-radius: var(--deepai-radius);
+	overflow: hidden;
+}
+
+.deepai-table thead th {
+	background: var(--deepai-gray-50);
+	font-weight: 600;
+	color: var(--deepai-gray-600);
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	padding: 10px 14px;
+	border-bottom: 2px solid var(--deepai-gray-200);
+}
+
+.deepai-table tbody td {
+	padding: 12px 14px;
+	font-size: 14px;
+	border-bottom: 1px solid var(--deepai-gray-100);
+}
+
+.deepai-table tbody tr:hover {
+	background: var(--deepai-gray-50);
+}
+
+.deepai-muted {
+	color: var(--deepai-gray-300);
+}
+
+.deepai-pagination {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.deepai-pagination .page-numbers {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	margin: 0 2px;
+	border-radius: var(--deepai-radius);
+	font-size: 13px;
+	text-decoration: none;
+	color: var(--deepai-gray-600);
+	border: 1px solid var(--deepai-gray-200);
+}
+
+.deepai-pagination .page-numbers.current {
+	background: var(--deepai-primary);
+	color: #fff;
+	border-color: var(--deepai-primary);
+}
+
+/* ==========================================================================
+   Modal
+   ========================================================================== */
+
+.deepai-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.deepai-modal-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.deepai-modal-content {
+	position: relative;
+	width: 90%;
+	max-width: 520px;
+	background: #fff;
+	border-radius: var(--deepai-radius-lg);
+	box-shadow: var(--deepai-shadow-lg);
+	overflow: hidden;
+}
+
+.deepai-modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 20px;
+	background: var(--deepai-gray-50);
+	border-bottom: 1px solid var(--deepai-gray-200);
+}
+
+.deepai-modal-header h3 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--deepai-gray-800);
+}
+
+.deepai-modal-close {
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	color: var(--deepai-gray-400);
+	padding: 0;
+	line-height: 1;
+}
+
+.deepai-modal-close:hover {
+	color: var(--deepai-gray-600);
+}
+
+.deepai-modal-body {
+	padding: 20px;
+}
+
+.deepai-modal-footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	padding: 16px 20px;
+	background: var(--deepai-gray-50);
+	border-top: 1px solid var(--deepai-gray-200);
+}
+
+.deepai-modal-cancel {
+	border-radius: var(--deepai-radius) !important;
+}
+
+/* ==========================================================================
+   Toast Notifications
+   ========================================================================== */
+
+.deepai-toast-container {
+	position: fixed;
+	top: 42px;
+	right: 20px;
+	z-index: 100200;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.deepai-toast {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 18px;
+	border-radius: var(--deepai-radius);
+	box-shadow: var(--deepai-shadow-md);
+	font-size: 14px;
+	font-weight: 500;
+	min-width: 280px;
+	max-width: 420px;
+	animation: deepai-slide-in 0.3s ease;
+	cursor: pointer;
+}
+
+.deepai-toast.deepai-toast-success {
+	background: var(--deepai-success-light);
+	color: #065f46;
+	border: 1px solid var(--deepai-success);
+}
+
+.deepai-toast.deepai-toast-error {
+	background: var(--deepai-danger-light);
+	color: #991b1b;
+	border: 1px solid var(--deepai-danger);
+}
+
+.deepai-toast.deepai-toast-info {
+	background: var(--deepai-info-light);
+	color: #1e40af;
+	border: 1px solid var(--deepai-info);
+}
+
+@keyframes deepai-slide-in {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* ==========================================================================
+   No Data State
+   ========================================================================== */
+
+.deepai-no-data {
+	text-align: center;
+	color: var(--deepai-gray-400);
+	padding: 20px;
+	font-size: 14px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 782px) {
+	.deepai-wrap {
+		padding: 0 10px;
+	}
+
+	.deepai-settings-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.deepai-header h1 {
+		font-size: 18px;
+	}
+
+	.deepai-card-footer {
+		flex-direction: column;
+	}
+
+	.deepai-action-group {
+		width: 100%;
+	}
+
+	.deepai-action-group .button {
+		flex: 1;
+		justify-content: center;
+	}
+}

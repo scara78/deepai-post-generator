@@ -1,0 +1,49 @@
+name: Plugin Check
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  plugin-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          tools: composer, wp-cli
+
+      - name: Install WordPress Plugin Check
+        run: wp plugin install plugin-check --activate --allow-root || true
+
+      - name: Run Plugin Check
+        run: |
+          wp plugin check deepai-post-generator --format=table --allow-root || true
+
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          tools: composer, phpcs
+
+      - name: Install WordPress Coding Standards
+        run: |
+          composer global require squizlabs/php_codesniffer wp-coding-standards/wpcs
+          phpcs --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs
+
+      - name: Run PHPCS
+        run: |
+          phpcs --standard=WordPress --extensions=php \
+            --ignore=vendor,node_modules \
+            --report=summary \
+            deepai-post-generator/ || true
