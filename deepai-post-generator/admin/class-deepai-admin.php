@@ -105,11 +105,15 @@ class DeepAI_Admin {
 			return;
 		}
 
+		$css_ver = defined( 'WP_DEBUG' ) && WP_DEBUG
+			? filemtime( DEEPAI_PG_PLUGIN_DIR . 'assets/css/admin.css' )
+			: $this->version;
+
 		wp_enqueue_style(
 			$this->plugin_slug . '-admin',
 			DEEPAI_PG_PLUGIN_URL . 'assets/css/admin.css',
 			array(),
-			$this->version
+			$css_ver
 		);
 	}
 
@@ -123,11 +127,15 @@ class DeepAI_Admin {
 			return;
 		}
 
+		$js_ver = defined( 'WP_DEBUG' ) && WP_DEBUG
+			? filemtime( DEEPAI_PG_PLUGIN_DIR . 'assets/js/admin.js' )
+			: $this->version;
+
 		wp_enqueue_script(
 			$this->plugin_slug . '-admin',
 			DEEPAI_PG_PLUGIN_URL . 'assets/js/admin.js',
 			array( 'jquery', 'wp-api-fetch' ),
-			$this->version,
+			$js_ver,
 			true
 		);
 

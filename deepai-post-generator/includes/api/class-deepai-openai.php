@@ -41,15 +41,27 @@ class DeepAI_OpenAI extends DeepAI_API_Base {
 	 */
 	public function generate_text( $prompt, $model = 'gpt-4o-mini', $options = array() ) {
 		$defaults = array(
-			'temperature'      => 0.7,
-			'max_tokens'       => 4096,
-			'system_message'   => 'You are a professional content writer. Write well-structured, engaging, and SEO-friendly content. Always output valid HTML markup for formatting.',
+			'temperature'    => 0.7,
+			'max_tokens'     => 4096,
+			'system_message' => 'You are a professional content writer. Write well-structured, engaging, and SEO-friendly content. Always output valid HTML markup for formatting.',
 		);
 		$options = wp_parse_args( $options, $defaults );
 
+		// Legacy models use max_tokens; newer models use max_completion_tokens.
+		$legacy_models = array( 'gpt-3.5-turbo', 'gpt-3.5-turbo-16k', 'gpt-4', 'gpt-4-32k' );
+		$token_param   = ( in_array( $model, $legacy_models, true ) || strncmp( $model, 'gpt-3', 5 ) === 0 ) ? 'max_tokens' : 'max_completion_tokens';
+
+		// Reasoning / o-series models and gpt-5 variants only accept temperature = 1.
+		$no_temperature_models = array( 'o1', 'o1-mini', 'o1-preview', 'o3', 'o3-mini', 'o4-mini' );
+		$is_reasoning = in_array( $model, $no_temperature_models, true )
+			|| strncmp( $model, 'o1-', 3 ) === 0
+			|| strncmp( $model, 'o3-', 3 ) === 0
+			|| strncmp( $model, 'o4-', 3 ) === 0
+			|| strncmp( $model, 'gpt-5', 5 ) === 0;
+
 		$body = array(
-			'model'       => $model,
-			'messages'    => array(
+			'model'        => $model,
+			'messages'     => array(
 				array(
 					'role'    => 'system',
 					'content' => $options['system_message'],
@@ -59,9 +71,13 @@ class DeepAI_OpenAI extends DeepAI_API_Base {
 					'content' => $prompt,
 				),
 			),
-			'temperature' => (float) $options['temperature'],
-			'max_tokens'  => (int) $options['max_tokens'],
+			$token_param   => (int) $options['max_tokens'],
 		);
+
+		// Only add temperature for models that support it.
+		if ( ! $is_reasoning ) {
+			$body['temperature'] = (float) $options['temperature'];
+		}
 
 		$response = $this->request( 'chat/completions', $body );
 
